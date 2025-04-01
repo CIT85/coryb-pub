@@ -1,0 +1,20 @@
+html {
+    font-size: 22px
+}
+
+body {
+    background-color:rgb(33, 31, 42);
+    color: rgb(20, 113, 141);
+}
+
+h1 {
+    color: teal;
+}
+
+h2 {
+    color: burlywood;
+}
+
+h3 {
+    color: rgb(131, 124, 68);
+}
