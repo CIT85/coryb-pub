@@ -1,0 +1,411 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* img styling */
+/* image auto sizing */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* base styling */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #606B66;
+    color: #BBCECB;
+    line-height: 1.3rem;
+}
+main {
+    padding: 1em;
+    margin-bottom: 45px;
+}
+h1, h2, h3 {
+    background-color: #0769B9;
+    margin: 0.25em;
+    border-radius: 10px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    padding: 0.75em;
+    grid-area: hdr;
+}
+h2 {
+    padding: 0.4em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+h3 {
+    padding: 0.1em;
+    margin-top: 0;
+}
+
+/* header */
+header {
+    padding: 2em;
+    padding-top: 0;
+    display: grid;
+    /* grid here is used to get all elements exactly where I want them */
+    grid-template-areas:
+        "hdr hdr hdr"
+        "img nv1 nv2";
+}
+nav {
+    background-color: #B585CC;
+    padding: 0.5em 2em 0.5em 1.5em;
+    margin-right: -0.6em;
+    border-radius: 7px;
+}
+.nav1 {
+    grid-area: nv1;
+}
+.nav2 {
+    grid-area: nv2;
+}
+header figure {
+    grid-area: img;
+}
+
+/* footer */
+footer {
+    background-color: #0769B9;
+    width: 100%;
+    padding: 0.3em;
+    margin-right: 0em;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+/* table styling */
+table {
+    margin-bottom: 1em;
+    border: 3px solid #333;
+    border-radius: 5px;
+    background-color: #B585CC;
+    color: #606B66;
+    font-size: 0.75rem;
+    font-weight: bolder;
+    column-span: all;
+}
+th, td {
+    border: 1px solid #555;
+    padding: 0.25em;
+    text-align: center;
+}
+thead, td:first-child {
+    background-color: #0769B9;
+    color: #948F7D;
+    font-size: 1rem;
+}
+dl {
+    border: 3px solid #BBCECB;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+dt {
+    border: 2px solid #BBCECB;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #0769B9;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+dd {
+    border: 1px solid;
+    border-radius: 4px;
+    margin-left: 0;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    text-align: center;
+}
+
+/* columns */
+article {
+    columns: 2;
+}
+section {
+    break-before: column;
+}
+h2 {
+    column-span: all;
+}
+.colspan {
+    column-span: all;
+}
+
+/* main content grid layout */
+/* the formart for most of the page uses a combination of column and flex */
+/* basically column is used to get the sections into columns and the figure is set to span across the columns and flex is used to center the image */
+article figure {
+    column-span: all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* links */
+a, a:hover, a:focus, a:hover a:visited {
+    color: #0769B9;
+    background-color: #948F7D;
+    padding: 0.1rem;
+    padding-top: 0;
+    border-radius: 3px;
+}
+a:hover, a:focus {
+    color: #0769b94f;
+}
+a:visited {
+    color: #BBCECB;
+}
+
+/* IMAGES */
+img {
+    border: 3px solid #000;
+    border-radius: 20px;
+    width: 50%;
+    height: auto;
+}
+
+/* COLOR PALETTE */
+/* Flex is used here to make the palette look nice and easily make it responsive to page width */
+.colorpalette {
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.colorpalette li {
+    margin-left: 45px;
+    text-wrap: wrap;
+    max-width: 70px;
+}
+/* headings color */
+.color1 {
+    width: 50px;
+    height: 50px;
+    background-color: #0769B9;
+}
+/* background color */
+.color2 {
+    width: 50px;
+    height: 50px;
+    background-color: #BBCECB;
+}
+/* alt color1 */
+.color3 {
+    width: 50px;
+    height: 50px;
+    background-color: #948F7D;
+}
+/* accenting color */
+.color4 {
+    width: 50px;
+    height: 50px;
+    background-color: #B585CC;
+}
+/* alt color2 */
+.color5 {
+    width: 50px;
+    height: 50px;
+    background-color: #606B66;
+}
+.divborder {
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* MEDIA QUERIES */
+/* XS */
+@media screen and (max-width: 639px) {
+    h1, h2, h3, h4, p, ul, li {
+        padding: 0.25rem;
+        margin: 0.25rem;
+    }
+    nav {
+        line-height: 0.1;
+        padding: 0.25rem;
+        padding-top: 0.35rem;
+        padding-bottom: 0rem;
+    }
+    a {
+        padding: 0rem;
+    }
+    body {
+        line-height: 1.2;
+    }
+    h1 {
+        font-size: 1.25rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3, dt {
+        font-size: 0.75rem;
+    }
+    h4, p, table, dd, summary, figcaption, ul, h5 {
+        font-size: 0.5rem;
+    }
+    thead, td:first-child {
+        font-size: 0.75rem;
+    }
+    article {
+        columns: 1;
+    }
+    header {
+        grid-template-areas:
+        "hdr hdr hdr"
+        "img img img"
+        "nv1 nv1 nv2";
+    }
+    header figure {
+        display: grid;
+        place-items: center;
+    }
+    img {
+        width: 25%;
+    }
+}
+/* SMALL */
+/* because the xs breakpoint uses max-width i need to redefine basically everything here */
+@media screen and (min-width: 640px) {
+    h1, h2, h3, h4, p, ul, li {
+        padding: 0.25rem;
+        margin: 0.25rem;
+    }
+    nav {
+        line-height: 0.5;
+        padding: 0.5rem;
+        padding-top: 0.45rem;
+        padding-bottom: 0rem;
+    }
+    a {
+        padding: 0rem;
+    }
+    body {
+        line-height: 1.3;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3, dt {
+        font-size: 1rem;
+    }
+    h4, p, table, dd, summary, figcaption, ul, h5 {
+        font-size: 1rem;
+    }
+    thead, td:first-child {
+        font-size: 1.25rem;
+    }
+    article {
+        columns: 1;
+    }
+    header {
+        grid-template-areas:
+        "hdr hdr hdr"
+        "img img img"
+        "nv1 nv1 nv2";
+    }
+    header figure {
+        display: grid;
+        place-items: center;
+    }
+    img {
+        width: 25%;
+    }
+    main {
+        margin-bottom: 75px;
+    }
+}
+/* MEDIUM */
+@media screen and (min-width: 768px) {
+    h1, h2, h3, h4, p, ul, li {
+        margin: 0.5rem;
+    }
+    img, figcaption {
+        margin-bottom: 0.5rem;
+    }
+    main {
+        margin-bottom: 80px;
+    }
+}
+/* LARGE */
+@media screen and (min-width: 1024px) {
+    article {
+        columns: 2;
+    }
+    header {
+        grid-template-areas:
+        "hdr hdr hdr"
+        "img nv1 nv2";
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;
+    }
+    section h3 {
+        margin-top: 0rem;
+    }
+    main {
+        margin-bottom: 100px;
+    }
+}
+/* XL */
+@media screen and (min-width: 1280px) {
+    h1 {
+        font-size: 3rem;
+        padding: 0.75rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.25rem;
+    }
+    h4, p, table, dd, summary, figcaption, ul, h5 {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+    ul {
+        line-height: 1;
+    }
+    thead, td:first-child {
+        font-size: 1.5rem;
+    }
+    main {
+        margin-bottom: 120px;
+    }
+}
+/* 2XL */
+@media screen and (min-width: 1536px) {
+    h1, h2, h3, h4, p, ul, li {
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+    h4, p, table, dd, summary, figcaption, ul, h5 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    ul {
+        line-height: 1;
+    }
+    thead, td:first-child {
+        font-size: 1.75rem;
+    }
+    main {
+        margin-bottom: 140px;
+    }
+}
