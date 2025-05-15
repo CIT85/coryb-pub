@@ -224,6 +224,16 @@ img {
     margin-top: 10px;
 }
 
+/* Form Page */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.submit {
+    margin: 0.5rem;
+}
+
 /* MEDIA QUERIES */
 /* XS */
 @media screen and (max-width: 639px) {

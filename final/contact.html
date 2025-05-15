@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Cory Brown">
+        <meta name="description" content="Contact page">
+        <title>Cantact Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="img/placeholder.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Contact</h1>
+            <nav class="nav2">
+                <h5>Menu</h5>
+                <ul>
+                    <li><a href="case.html">Case</a></li>
+                    <li><a href="cpu.html">CPU</a></li>
+                    <li><a href="gpu.html">GPU</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <h2>Some Stuff About Me.</h2>
+                <p>
+                    I usually spend my free time playing video games. I have built several gaming systems so decided that putting together a site about this would be pretty cool.
+                </p>
+            </article>
+            <article>
+                <h2>Information</h2>
+                <section>
+                    <h3>Name</h3>
+                    <form action="https://httpbin.org/post" method="post">
+                    <p>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </p>
+                    <h3>Other Info</h3>
+                    <p>
+                        <label>Favortive GPU Manufacturer:</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="AMD" name="gender" value="AMD">
+                        <label for="AMD">AMD</label required>
+                        <input type="radio" id="NVIDIA" name="gender" value="NVIDIA">
+                        <label for="NVIDIA">NVIDIA</label required>
+                    </p>
+                    <p>
+                        <label>Choose your hobbies:</label><br>
+                        <input type="checkbox" id="reading" name="hobbies" value="reading">
+                        <label for="reading">Reading</label><br>
+
+                        <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+                        <label for="gaming">Gaming</label><br>
+
+                        <input type="checkbox" id="cooking" name="hobbies" value="cooking">
+                        <label for="cooking">Cooking</label><br>
+
+                        <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+                        <label for="traveling">Traveling</label>
+                    </p>
+                    <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+                    <input class="submit" type="submit" value="Submit">
+                </section>
+            </form>
+            </article>
+        </main>
+
+        <footer>
+            <p><a href="#">Back to top</a> <a href="index.html">Home</a> <a href="site.html">Site Page</a></p>
+        </footer>
+    </body>
+</html>
