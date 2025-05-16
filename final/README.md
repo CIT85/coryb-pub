@@ -25,3 +25,11 @@ Grid is used to get fine control of where each element of my header goes.
 The new page is mostly just to provide quick reference to a few decent CPU options based on performance vs budget.
 ## Image optimization
 Basically just the auto sizing. They are all at 500x500px and they can be quite large so I see no need to resize them.
+
+## Hero Image Design
+### Why I chose the image
+The background image I chose is AI generated using the same generator as the rest of the images. I chose this one because it represents the idea behind the whole site with the various computer parts laid out ready for assembly.
+### Where it appears
+It appears on the main page directly below the header.
+### Design choices
+I decided to have the main heading for the hero section span the top in large print. The second heading and a paragraph are set to the left with a complementary image to the right. For contrast I think it could be improved but with the shadows I'm unsure how I can improve it.

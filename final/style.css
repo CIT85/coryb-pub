@@ -234,6 +234,52 @@ form {
     margin: 0.5rem;
 }
 
+/* HERO Section */
+.hero {
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero h2 {
+    font-size: 3rem;
+    grid-area: hd1;
+}
+.hero h3 {
+    font-size: 2rem;
+    grid-area: hd2;
+}
+.hero h2, .hero h3 {
+    font-weight: bolder;
+    background-color: #0769b949;
+    text-shadow: 3px 3px 4px #000;
+}
+.hero p {
+    font-size: 1.75rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 1px #000;
+    grid-area: par;
+}
+.hero p, .hero h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero article {
+    display: grid;
+    grid-template-areas:
+        "hd1 hd1 hd1"
+        "hd2 hd2 pic"
+        "par par pic";
+}
+.hero figure {
+    grid-area: pic;
+}
+.hero figure img {
+    width: 100%;
+    height: auto;
+}
+
 /* MEDIA QUERIES */
 /* XS */
 @media screen and (max-width: 639px) {
