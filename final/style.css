@@ -133,6 +133,9 @@ article {
 section {
     break-before: column;
 }
+p {
+    break-inside: avoid;
+}
 h2 {
     column-span: all;
 }
